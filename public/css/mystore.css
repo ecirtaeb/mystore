@@ -1,0 +1,207 @@
+/*
+font-family: 'Indie Flower', cursive;
+font-family: 'Open Sans', sans-serif;
+*/
+* {
+	box-sizing : border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+.flex {
+	display : flex;
+	flex-wrap : wrap;
+	flex-direction : row;
+	justify-content : space-between;
+}
+
+.container {
+	width : 1100px;
+	margin : 0 auto;
+	/*background-image :linear-gradient(75deg, BurlyWood, rgba(255,248,220,1));*/
+	color : DarkBlue;
+}
+
+
+body {
+	text-align : center;
+	font-family: 'Kavivanar', cursive;
+	margin : 0;
+}
+
+a.active  {
+	background-color : DeepSkyBlue;
+/*#00bfff;*/
+	color : white;
+	border  : none;
+}
+
+ul {
+	list-style-type: none;
+    padding: 0;
+}
+
+ul li  {
+	width	 : 30%;	
+}
+
+ul li img {
+	border : 2px solid DeepSkyBlue;
+}
+
+h1 {
+	color : DeepSkyBlue;
+}
+
+h2 {
+	background-color: BurlyWood;
+	color : DarkBlue;
+}
+
+h1, h2 {
+	text-align: center;
+	margin : 10px auto;
+
+}
+h3 {
+	text-transform: uppercase;
+	font-family: 'Indie Flower', cursive;
+}
+
+
+/**************
+     HEADER
+***************
+*/
+
+header {
+	padding : 5px;
+	margin : 0 auto;
+	text-align : center;
+}
+
+nav a {
+
+	text-decoration: none;
+	padding : 10px;
+	border : 0px solid DarkBlue;
+	background-color: rgba(256,256,256,0.3);
+	color : DeepSkyBlue;
+	font-weight : bold;
+	width : 22%;
+}
+
+nav {
+
+	/*width : 75%;*/
+	/*border : 8px solid BurlyWood;*/
+	background-color : rgba(0,191,255,0.2);
+	background-image: linear-gradient( rgba(0,191,255,0.2), rgba(250,200,125,0.5));
+	padding : 30px 150px;
+}
+
+/**************
+   PAGE ACCUEIL
+***************
+*/
+
+#accueil section {
+	width : 75%;
+	margin : 0 auto;
+}
+
+/******************************
+   FORMULAIRE 
+*******************************
+*/
+
+form {
+	margin-top : 15px;
+		padding : 50px;
+
+
+}
+
+form.flex {
+	display : flex;
+	flex-wrap : wrap;
+	flex-direction : rows;
+	justify-content : space-between;
+}
+
+ form label {
+	margin-bottom: 15px;
+	width : 45%;
+	text-align : left;
+	padding-left : 20px;
+}
+
+form input, form button {
+	margin-bottom: 15px;
+	background-image: linear-gradient(rgba(0,191,255,0.2), rgba(250,200,125,0.5));
+	font-family: 'Kavivanar', cursive;
+	border : none;
+	padding : 10px;
+}
+
+form input {
+	width : 40%;
+}
+
+form button {
+
+	border-radius : 50%;
+	height : 50px;
+	width : 50px;
+	border : 5px double BurlyWood;
+}
+
+
+/******************
+     CATALOGUE
+******************
+*/
+#catalogue  li img {
+	height : 180px;
+	width : 180px;
+	border : 8px double BurlyWood;
+	border-radius : 50%;
+	padding : 5px;
+	
+} 
+
+#catalogue article a {
+
+	margin: 10px 0;
+	background-image: linear-gradient(rgba(0,191,255,0.2), rgba(250,200,125,0.5));
+	font-family: 'Kavivanar', cursive;
+
+}
+
+/****************
+    RECHERCHE
+*****************
+*/
+#retourRecherche span {
+
+	font-weight: bold;
+}
+
+/****************
+    LOGIN
+*****************
+*/
+a.login, button#login {
+
+	margin-bottom: 15px;
+	background-image: linear-gradient(rgba(0,191,255,0.2), rgba(250,200,125,0.5));
+	font-family: 'Kavivanar', cursive;
+	border : none;
+	padding : 10px;
+}
+
+
+
+
