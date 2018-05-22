@@ -1,3 +1,4 @@
+<?php include 'head.phtml.php'; ?>
 <body >
 	<head>
 		<nav class="flex">

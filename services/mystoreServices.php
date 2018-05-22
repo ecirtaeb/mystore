@@ -9,16 +9,16 @@ function connexion() {
 
 	$user ='root';
 	$password ='troiswa';
-//	$password= '';
+	$password= '';
 	$db = new PDO('mysql:host=localhost;dbname=mystore', $user, $password);	
 	$db->exec('SET NAMES UTF8');
 	return $db;	
 }
 
-function login($ident) {
+function login($ident,$mdp) {
 	
 	$db = connexion();
-	$select = "SELECT * FROM user where login = '{$ident}'" ;
+	$select = "SELECT * FROM user where (login = '{$ident}' or mail = '{$ident}') and password = '{$mdp}'" ;
 	pre($select);
 	$user = [];
 	$statement = $db->prepare($select);
