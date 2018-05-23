@@ -2,7 +2,7 @@
 <body>
 	<head>
 		<nav class="flex">
-			<a href="index.php">Accueil</a>
+			<a href="home.php">Accueil</a>
 			<a href="catalogue.php">Catalogue</a>
 			<a href="panier.php">Votre panier</a>
 		</nav>
