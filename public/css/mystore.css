@@ -70,7 +70,6 @@ h3 {
 	font-family: 'Indie Flower', cursive;
 }
 
-
 /**************
      HEADER
 ***************
@@ -98,6 +97,22 @@ nav {
 	background-color : rgba(0,191,255,0.2);
 	background-image: linear-gradient( rgba(0,191,255,0.2), rgba(250,200,125,0.5));
 	padding : 30px 150px;
+}
+
+section.user a {
+
+	padding : 15px;
+	display : inline-block;
+	margin : 0 auto;
+	background-color : rgba(0,191,255,0.2);
+}
+
+section.user p {
+
+	padding : 2px;
+	margin : 5px auto;
+	width : 100%;
+
 }
 
 /**************
@@ -168,7 +183,11 @@ button.rech {
 	
 } 
 
-#catalogue article a {
+section.catalogue article {
+	margin-bottom: 20px;
+}
+
+section.catalogue a {
 
 	margin: 10px 0;
 	background-image: linear-gradient(rgba(0,191,255,0.2), rgba(250,200,125,0.5));

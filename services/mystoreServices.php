@@ -1,32 +1,41 @@
 <?php 
-function pre($trukmuch) {
-	echo '<pre>';
-	print_r ($trukmuch);
-	echo '</pre>';
-}
+//  fonctions de connexion/user
 
 function connexion() {
 
 	$user ='root';
 	$password ='troiswa';
-	$password= '';
+//	$password= '';
 	$db = new PDO('mysql:host=localhost;dbname=mystore', $user, $password);	
 	$db->exec('SET NAMES UTF8');
 	return $db;	
 }
 
-function login($ident,$mdp) {
+function login($mail,$mdp) {
 	
 	$db = connexion();
-	$select = "SELECT * FROM user where (login = '{$ident}' or mail = '{$ident}') and password = '{$mdp}'" ;
-	pre($select);
+	$select = "SELECT * FROM user WHERE email = '$mail' and password = '$mdp'" ;
 	$user = [];
 	$statement = $db->prepare($select);
 	$statement->execute();
 	$user = $statement->fetchAll(\PDO::FETCH_ASSOC);
+//	pre($user[0]);
+	return $user[0];
+}
+
+function infoUser ($id) {
+
+	$db = connexion();
+	$select = "SELECT * FROM user where id like '%{$id}%'";
+	$user = [];
+	$statement = $db->prepare($select);
+	$statement->execute();
+	$user = $statement->fetch(\PDO::FETCH_ASSOC);
 	
 	return $user;
 }
+
+//  autres fonctions
 
 function allProducts() {
 	

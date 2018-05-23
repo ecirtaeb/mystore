@@ -6,11 +6,14 @@
 			<a href="catalogue.php" class="active">Catalogue</a>
 			<a href="panier.php">Votre panier</a>
 		</nav>
-		<section class="login flex">
-			<?php if ( isset($user) ) : ?>
-				<p><?=$user['firstname']?> connecté</p>
+
+		<section class="user flex login">
+			<?php if ( !isset($_SESSION['firstname']) ) : ?>
+					<p>NON CONNECTE</p>
+					<a href="login.php" class="login">Connexion</a>
 			<?php else : ?>
-				<p>Non connecté à un compte</p>
+				<p><?=$_SESSION['firstname']?> connecté</p>
+				<a href="logoffUser.php" class="login">Dé connexion</a>
 			<?php endif; ?>
 		</section>
 
@@ -22,7 +25,7 @@
 	</head>
 	<main id="catalogue" class="container">
 		<h1>Notre catalogue</h1>
-		<section>		
+		<section class="catalogue">		
 			<ul class="flex">
 				<?php foreach ($products as $product) : ?>
 					<li>
@@ -31,7 +34,7 @@
 							<h3><?=$product['name'] ?></h3>
 							<p><?=$product['description'] ?></p>
 							<p>Prix : <span><?=$product['price'] ?></span></p>
-							<a href="ajoutPanier.php">Ajouter au panier hé hé !</a>
+							<a href="ajoutPanier.php">Ajouter au panier allez !!!</a>
 						</article>
 					</li>
 				<?php endforeach; ?>

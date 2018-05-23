@@ -6,9 +6,18 @@
 			<a href="catalogue.php">Catalogue</a>
 			<a href="panier.php">Votre panier</a>
 		</nav>
-		<section class="login flex">
-			<a href="login.php" class="login">Vous connecter à votre compte</a>
+
+		<section class="user flex login">
+			<?php if ( !isset($_SESSION['firstname']) ) : ?>
+					<p>NON CONNECTE</p>
+					<a href="login.php" class="login">Connexion</a>
+			<?php else : ?>
+				<p><?=$_SESSION['firstname']?> connecté</p>
+				<a href="logoffUser.php" class="login">Dé connexion</a>
+			<?php endif; ?>
 		</section>
+
+
 	</head>
 	<main class="container">
 		<h1>MYSTORE</h1>
