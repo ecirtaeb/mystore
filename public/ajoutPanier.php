@@ -5,8 +5,7 @@ $id = $_GET['id'];
 
 if ( isset($_SESSION['cart']) ) {
 
-	$_SESSION['panier'] = $_SESSION['panier'] + 1;
-	$_SESSION['cart'][] = intval($id);
+	$_SESSION['cart'][] = $id;
 
 } else {
 

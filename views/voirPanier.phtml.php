@@ -10,20 +10,20 @@
 					<th>Prix</th>
 					<th>Supprimer</th>
 				</thead>
-				<?php $total = 0;
-				 for ($i = 0 ; $i < strlen($cart) ; $i++): ?>
-				<?= 
-					$id=intval($cart[$i]); 
+				<?php 
+				$total = 0;
+				$cart = $_SESSION['cart'];
+				 foreach ($cart as $key => $id) {
 					$product=getproductById($id);
 					$total = $total + $product['price'];
+				}
 				?>
 				<tr>
-					<td><?=$product['name'] ?></td>
-					<td><?=$product['description'] ?></td>
-					<td><?=$product['price'] ?></td>
+					<td><?php $product['name'] ?></td>
+					<td><?php $product['description'] ?></td>
+					<td><?php $product['price'] ?></td>
 					<td><a href="#">Supprimer</a></td>
 				</tr>		
-				<?php endfor; ?>
 				<tfooter>
 					<td colspan="2">Total</td>
 					<td><?php $total ?></td>

@@ -1,4 +1,4 @@
 <footer>
-	<?php pre($_SESSION) ?>
+	<!--<?php pre($_SESSION) ?>-->
 </footer>
 </html>
