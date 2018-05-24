@@ -1,24 +1,4 @@
 <?php include 'head.phtml.php'; ?>
-<body >
-	<head>
-		<nav class="flex">
-			<a href="home.php"  class="active">Accueil</a>
-			<a href="catalogue.php">Catalogue</a>
-			<a href="panier.php">Votre panier</a>
-		</nav>
-
-		<section class="user flex login">
-			<?php if ( !isset($_SESSION['id']) ) : ?>
-					<p>NON CONNECTE</p>
-					<a href="login.php" class="login">Connexion</a>
-			<?php else : ?>
-				<?php $user = getUserById($_SESSION['id']) ?>
-				<p><?=$user['firstname']?> connecté</p>
-				<a href="logoff.php" class="login">Dé connexion</a>
-			<?php endif; ?>
-		</section>
-
-	</head>
 	<main class="container">
 		<h1>MYSTORE</h1>
 		<section>
@@ -40,3 +20,5 @@
 
 	</main>
 </body>
+<?php include 'footer.phtml.php';?>
+

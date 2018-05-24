@@ -1,7 +1,7 @@
 <?php
-include '../services/tools.php';
 include '../services/bootstrap.php';
 
-session_destroy();  
+//session_destroy(); 
+$_SESSION('id') = "";
 
 header('location:home.php');

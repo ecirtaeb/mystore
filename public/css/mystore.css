@@ -191,6 +191,40 @@ section.catalogue a {
 
 }
 
+
+/******************
+     PANIER
+******************
+*/
+
+
+table#panier {
+
+	border-collapse : collapse;
+	border : 1px solid DeepSkyBlue;
+}
+
+table#panier  td, table#panier  th {
+
+	border : 1px solid DeepSkyBlue;
+	color : #999;
+}
+
+table#panier th {
+
+	background-color: DeepSkyBlue;
+	color : white;
+}
+
+table#panier  td::first-child {
+	font-height : bold;
+}
+
+table#panier td {
+	
+	text-align : left;
+}
+
 /****************
     RECHERCHE
 *****************
@@ -199,6 +233,54 @@ section.catalogue a {
 
 	font-weight: bold;
 }
+
+/******************
+    FICHE PRODUIT
+*******************
+*/
+
+section#produit {
+	text-align : left;
+}
+
+section#produit img {
+	width : 35%;
+}
+
+section#produit span {
+
+	font-weight: bold;
+}
+
+section#produit h2 {
+
+	font-family: 'Open Sans', sans-serif;
+	background-color: white;
+	text-align: left;
+	padding : 0;
+	margin : 0;
+}
+
+section#produit article.flex {
+	display : flex;
+	flex-wrap : wrap;
+	flex-direction : rows;
+	justify-content : space-between;
+}
+
+section#produit a {
+
+	border : 2px solid #999 ;
+	padding : 2px;
+	width : 200px;
+}
+
+.width50 {
+
+	width : 60%;
+
+}
+
 
 /****************
     LOGIN
@@ -221,7 +303,3 @@ form.login {
 form.login input {
 	width : 100%;
 }
-
-
-
-

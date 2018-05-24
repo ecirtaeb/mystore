@@ -26,6 +26,18 @@ function allProducts() {
 	return $products;
 }
 
+function getProductById($id) {
+	
+	$db = connexion();
+	$select = "SELECT * FROM product where id = {$id}";
+	$product = [];
+	$statement = $db->prepare($select);
+	$statement->execute();
+	$product = $statement->fetch(\PDO::FETCH_ASSOC);
+	
+	return $product;
+}
+
 function findProduct($quoi) {
 	
 	$db = connexion();
@@ -37,22 +49,3 @@ function findProduct($quoi) {
 	
 	return $products;
 }
-
-/*
-function showCart($panier) {
-	
-	$db = connexion();
-	$select = "SELECT * FROM cart";
-	$cart = [];
-	$statement = $db->prepare($select);
-	$statement->execute();
-	$cart = $statement->fetchAll(\PDO::FETCH_ASSOC);
-	
-	return $cart;
-
-}
-*/
-
-/*
-INSERT INTO `product` (`id`, `name`, `price`, `description`, `photo`, `quantity`, `is_active`) VALUES (NULL, 'château de sable modèle 2', '25', 'kit comprenant un sac de sable et le plan de construction Photo non contractuelle', 'chateau2.png', '10', '1')
-*/

@@ -1,8 +1,8 @@
 <?php
-
-include '../services/tools.php';
 include '../services/bootstrap.php';
-include '../services/mystoreServices.php';
 
-include  '../views/head.phtml.php';
+if (!isset($_SESSION['panier'])) {
+	$_SESSION ['panier'] = 0;
+	$_SESSION['cart'] = "";
+}
 include '../views/home.phtml.php';

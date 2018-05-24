@@ -1,28 +1,5 @@
 <?php include 'head.phtml.php'; ?>
-<body>
-	<head>
-		<nav class="flex">
-			<a href="home.php" >Accueil</a>
-			<a href="catalogue.php">Catalogue</a>
-			<a href="panier.php">Votre panier</a>
-		</nav>
-		<section class="user flex login">
-			<?php if ( !isset($_SESSION['id']) ) : ?>
-					<p>NON CONNECTE</p>
-					<a href="login.php" class="login">Connexion</a>
-			<?php else : ?>
-				<?php $user = getUserById($_SESSION['id']) ?>
-				<p><?=$user['firstname']?> connecté</p>
-				<a href="logoff.php" class="login">Dé connexion</a>
-			<?php endif; ?>
-		</section>
-		<form method="GET" action="recherche.php">
-			<label for="rechArticle"></label>
-			<input type="text"  id="rechArticle" name="findProduct" placeholder="Que cherchez-vous ?">
-			<button type="submit" class="rech">GO</button>
-		</form>
 
-	</head>
 	<main id="retourRecherche" class="container">
 		<h1>Resultat de la recherche</h1>
 		<?php echo('Vous recherchiez : <span>' . $rech) . '</span>' ?>
@@ -47,3 +24,4 @@
 		<?php endif  ?>
 	</main>
 </body>
+<?php include 'footer.phtml.php'; ?>
