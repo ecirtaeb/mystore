@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="../public/css/normalize.css">
 </head>
 <body>
-	<head>
+	<header>
 		<nav class="flex">
 			<a href="home.php" >Accueil</a>
 			<a href="catalogue.php" class="active">Catalogue</a>
@@ -39,4 +39,4 @@
 			<button type="submit" classe="rech">GO</button>
 		</form>
 		
-	</head>
+	</header>

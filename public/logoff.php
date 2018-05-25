@@ -1,6 +1,10 @@
 <?php
 include '../services/bootstrap.php';
 
-session_destroy();  
+$cart = [];
+$cart = $_SESSION['cart'] ;
+session_destroy(); 
+$_SESSION['cart'] = [];
+$_SESSION['cart'] = $cart;
 
 header('location:home.php');

@@ -1,11 +1,11 @@
 <?php
 include '../services/bootstrap.php';
 
-$id = $_GET['id'];
+$i = $_GET['i'];
 
 if ( isset($_SESSION['cart']) ) {
 
-	$_SESSION['cart'][] = $id;
+	array_splice($_SESSION['cart'],$i,1);
 
 } else {
 
@@ -13,4 +13,4 @@ if ( isset($_SESSION['cart']) ) {
 }
 
 //include '../views/voirPanier.phtml.php';
-header('location:catalogue.php');
+header('location:panier.php');

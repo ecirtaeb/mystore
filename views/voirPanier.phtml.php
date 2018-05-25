@@ -2,10 +2,9 @@
 	<main id="panier" class="container">
 		<h1>Votre panier</h1>
 		<section>	
-
 			<table id="panier">
 				<thead>
-					<th>Nom</th>
+					<th colspan="2">Article</th>
 					<th>Description</th>
 					<th>Prix</th>
 					<th>Supprimer</th>
@@ -13,21 +12,24 @@
 				<?php 
 				$total = 0;
 				$cart = $_SESSION['cart'];
-				 foreach ($cart as $key => $id) {
-					$product=getproductById($id);
-					$total = $total + $product['price'];
-				}
 				?>
-				<tr>
-					<td><?php $product['name'] ?></td>
-					<td><?php $product['description'] ?></td>
-					<td><?php $product['price'] ?></td>
-					<td><a href="#">Supprimer</a></td>
-				</tr>		
-				<tfooter>
-					<td colspan="2">Total</td>
-					<td><?php $total ?></td>
-				</footer>
+				<?php foreach ($cart as $i=>$id) : ?>
+					<?php
+					$product=getproductById($id);
+					$total += $product['price'];
+					?>
+					<tr>
+						<td><img src="img/<?=$product['photo'] ?>" alt="<?=$product['name'] ?>"></td>
+						<td><?=$product['name'] ?></td>
+						<td><?=$product['description'] ?></td>
+						<td class="alignRight"><?=$product['price'] ?></td>
+						<td><a href="suppressionPanier.php?i=<?=$i?>">Supprimer</a></td>
+					</tr>
+				<?php endforeach; ?>
+				<tfoot>
+					<td colspan="3">Total</td>
+					<td><?=$total?></td>
+				</tfoot>		
 			</table>
 		</section>
 	</main>

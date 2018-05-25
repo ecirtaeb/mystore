@@ -16,7 +16,5 @@ if ( count($userconnect) == 0 ) {
 }
 
 $_SESSION ['id'] = $userconnect['id'];
-$_SESSION ['panier'] = 0;
-$_SESSION['cart'] = [];
 
 header('location:catalogue.php');

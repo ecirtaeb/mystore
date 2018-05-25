@@ -10,6 +10,10 @@ a {
 	text-decoration: none;
 }
 
+.clear {
+	clear : both;
+}
+
 .flex {
 	display : flex;
 	flex-wrap : wrap;
@@ -49,6 +53,9 @@ ul li  {
 
 h1 {
 	color : DeepSkyBlue;
+	text-align: center;
+	margin : 5px auto 10px;
+
 }
 
 h2 {
@@ -56,9 +63,9 @@ h2 {
 	color : DarkBlue;
 }
 
-h1, h2 {
+h2 {
 	text-align: center;
-	margin : 10px auto;
+	margin : 10px;
 
 }
 h3 {
@@ -109,16 +116,6 @@ section.user p {
 	margin : 5px auto;
 	width : 100%;
 
-}
-
-/**************
-   PAGE ACCUEIL
-***************
-*/
-
-#accueil section {
-	width : 75%;
-	margin : 0 auto;
 }
 
 /******************************
@@ -202,6 +199,8 @@ table#panier {
 
 	border-collapse : collapse;
 	border : 1px solid DeepSkyBlue;
+	width : 80%;
+	margin : 0 auto;
 }
 
 table#panier  td, table#panier  th {
@@ -214,15 +213,39 @@ table#panier th {
 
 	background-color: DeepSkyBlue;
 	color : white;
+	padding : 5px 5px;
 }
 
-table#panier  td::first-child {
-	font-height : bold;
+
+table#panier a {
+	padding : 5px;
+}
+
+table#panier td.alignRight {
+	text-align : right;
+	padding : 5px;
+}
+
+table#panier tr td::second-child {
+	font-weight : bold;
 }
 
 table#panier td {
-	
 	text-align : left;
+	padding : 5px 5px;
+}
+
+table#panier tfoot td {
+	text-align : right;
+	padding : 5px 5px;
+	font-height : bold;
+}
+
+
+table#panier img {
+	width: 60%;
+	diqplay : inline-block;
+	margin :  0 auto;
 }
 
 /****************
@@ -241,10 +264,19 @@ table#panier td {
 
 section#produit {
 	text-align : left;
+	margin : 100px auto;
+	width : 80%;
 }
 
+section#produit article{
+	float: right;
+}
+
+
 section#produit img {
-	width : 35%;
+	width : 40%;
+	float : left;
+	border : 2px solid BurlyWood;
 }
 
 section#produit span {
@@ -261,11 +293,12 @@ section#produit h2 {
 	margin : 0;
 }
 
-section#produit article.flex {
+section#produit .flex {
 	display : flex;
 	flex-wrap : wrap;
-	flex-direction : rows;
+	flex-direction : column;
 	justify-content : space-between;
+	width : 45%;
 }
 
 section#produit a {
@@ -275,9 +308,10 @@ section#produit a {
 	width : 200px;
 }
 
-.width50 {
+.width40 {
 
-	width : 60%;
+	width : 40%;
+	margin : 0 auto;
 
 }
 
@@ -303,3 +337,19 @@ form.login {
 form.login input {
 	width : 100%;
 }
+
+/************
+    FOOTER     *
+************/
+
+footer {
+	
+	background-image : url(../img/bcgplaya.png);
+	background-repeat : repeat;
+	background-color : white;
+	height: 200px;
+	size : 100%;
+	margin : 30px auto 0;
+	
+}
+

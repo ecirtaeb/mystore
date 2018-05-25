@@ -29,7 +29,7 @@ function allProducts() {
 function getProductById($id) {
 	
 	$db = connexion();
-	$select = "SELECT * FROM product where id = {$id}";
+	$select = "SELECT * FROM product where id = {intval($id)}";
 	$product = [];
 	$statement = $db->prepare($select);
 	$statement->execute();

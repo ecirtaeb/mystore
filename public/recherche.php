@@ -9,5 +9,4 @@ if  ( $rech == FALSE ) {
 }
 $products = findProduct($rech);
 
-include  '../views/head.phtml.php';
 include '../views/retourRecherche.phtml.php';
